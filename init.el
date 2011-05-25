@@ -13,3 +13,11 @@
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (progn (cd "~/.emacs.d/vendor")
        (normal-top-level-add-subdirs-to-load-path))
+
+
+;; Cargamos las modificaciones a la navegacion (ojo, keybinfings)
+(load-library "navigation.el")
+;; Cargamos todas las modificaciones visuales
+(load-library "visual-niceties.el")
+;; Cargamos las utilidades varias.
+(load-library "utilities.el")
