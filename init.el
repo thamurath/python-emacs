@@ -19,5 +19,7 @@
 (load-library "navigation.el")
 ;; Cargamos todas las modificaciones visuales
 (load-library "visual-niceties.el")
+;; Cargamos los visual bookmarks
+(load-library "visual-bookmarks.el")
 ;; Cargamos las utilidades varias.
 (load-library "utilities.el")

@@ -43,30 +43,35 @@
 ;; OJO -> Primero hay que modificar las variables que afecten al modo y luego activarlo!!!
 (display-time-mode t)
 
+;; Esto se supone que es para que resalte los pares de parentesis y esas cosas
+(require 'paren)
+(show-paren-mode 1)
 
-;; ;Show what's being selected
-;; (transient-mark-mode 1)
-;; ;Show matching parentheses
-;; (show-paren-mode 1)
-;; ;Line by line scrolling
-;; (setq scroll-step 1)
-;; (setq inhibit-startup-message t)
 ;; ;Disable the menubar (promotes good emacs memory :)
-;; (menu-bar-mode -1)
-;; (tool-bar-mode -1)
-;; (scroll-bar-mode -1)
-;; ;Make page up and page down a whole lot nicer
-;; (global-set-key "\C-v"	   'pager-page-down)
-;; (global-set-key [next] 	   'pager-page-down)
-;; (global-set-key "\ev"	   'pager-page-up)
-;; (global-set-key [prior]	   'pager-page-up)
-;; (global-set-key '[M-up]    'pager-row-up)
-;; (global-set-key '[M-kp-8]  'pager-row-up)
-;; (global-set-key '[M-down]  'pager-row-down)
-;; (global-set-key '[M-kp-2]  'pager-row-down)
-;; ;Show newlines at end of file
-;; (define-fringe-bitmap 'empty-line [0 0 #x3c #x3c #x3c #x3c 0 0])
-;; (set-default 'indicate-empty-lines nil)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+;;Line by line scrolling
+(setq scroll-step 1)
+
+;;Quitamos el mensaje inicial
+(setq inhibit-startup-message t)
+
+;;Autofill mode
+;;Cuando escribimos un fichero fuente o cuando escribimos un fichero de texto suele ser interesante que el editor decida 
+;;cuando no caben más palabras en en la línea actual y pase a la siguiente. Esta funcionalidad en emacs se conoce como 
+;;"auto-fill". Con la siguiente sentencia indicamos que la columna donde deben terminar las líneas es la 80 y que debe 
+;;activar el modo "auto-fill" para todos los modos derivados del modo de texto y en los modos para C y C++:
+(setq default-fill-column 80)
+(setq auto-fill-mode 1)  ;; con esto pondriamos el modo activo para todos
+;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
+;; (add-hook 'c++-mode-hook 'turn-on-auto-fill)
+;; (add-hook 'c-mode-hook 'turn-on-auto-fill)p
+
+;Show newlines at end of file
+(define-fringe-bitmap 'empty-line [0 0 #x3c #x3c #x3c #x3c 0 0])
+(set-default 'indicate-empty-lines nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Increase/Decrease font size on the fly
