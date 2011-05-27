@@ -120,3 +120,24 @@
 ;; Make copy and paste to work with other programs
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
+
+
+;; Esto es para que vaya borrando los espacios en blanco de los finales de linea
+;;; ************************************************************************
+;;;; *** strip trailing whitespace on write
+;;;; ************************************************************************
+;;;; ------------------------------------------------------------------------
+;;;; --- ws-trim.el - [1.3] ftp://ftp.lysator.liu.se/pub/emacs/ws-trim.el
+;;;; ------------------------------------------------------------------------
+(require 'ws-trim)
+(global-ws-trim-mode t)
+(set-default 'ws-trim-level 2)
+(setq ws-trim-global-modes '(guess (not message-mode eshell-mode)))
+(add-hook 'ws-trim-method-hook 'joc-no-tabs-in-java-hook)
+
+(defun joc-no-tabs-in-java-hook ()
+  "WS-TRIM Hook to strip all tabs in Java mode only"
+  (interactive)
+  (if (string= major-mode "jde-mode")
+      (ws-trim-tabs)))
