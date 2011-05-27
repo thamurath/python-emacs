@@ -24,6 +24,7 @@
 ;; Cargamos la libreria para realizar autocompletado
 (require 'auto-complete)
 
+
 ;; Cargamos una libreria que nos permite abrir ficheros como root (ojo keybingins)
 (load-library "open-file-root.el")
 
@@ -48,4 +49,7 @@
 ;; Cargamos los keybingdings
 (load-library "myyasnippet.el")
 
+;; Cargamos todas las configuraciones necesarias para trabajar con c y c++
+;; configuracion del modo, cedet , ede , etc ...
+(load-library "CC-configuration.el")
 
