@@ -1,4 +1,7 @@
 
+
+;; Cargamos la configuracion del layout del codigo
+(load-library "cc-code-layout.el")
 ;; Cargamos la configuracion de CEDET
 (load-library "mycedet.el")
 

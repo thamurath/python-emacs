@@ -112,3 +112,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Esto sirve para poder tomar notas en los ficheros sin modificarlos.
 (load-library "myannot.el")
+
+
+
+;; deleting files goes to OS's trash folder
+(setq delete-by-moving-to-trash t) ; "t" for true, "nil" for false
+;; Make copy and paste to work with other programs
+(setq x-select-enable-clipboard t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
