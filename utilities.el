@@ -78,18 +78,18 @@
 (require 'highlight-symbol)
 ;; TODO: asignarle teclas a las funciones siguientes.
 
-                                        ;Use C-f3 to toggle highlighting of the symbol at point throughout the current buffer. 
-                                        ;Use highlight-symbol-mode to keep the symbol at point always highlighted.
-                                        ;The functions highlight-symbol-next, highlight-symbol-prev, highlight-symbol-next-in-defun and
-                                        ; highlight-symbol-prev-in-defun allow for cycling through the locations of any symbol at point. 
-                                        ;When highlight-symbol-on-navigation-p is set, highlighting is triggered regardless of highlight-symbol-idle-delay.
+;Use C-f3 to toggle highlighting of the symbol at point throughout the current buffer. 
+;Use highlight-symbol-mode to keep the symbol at point always highlighted.
+;The functions highlight-symbol-next, highlight-symbol-prev, highlight-symbol-next-in-defun and
+; highlight-symbol-prev-in-defun allow for cycling through the locations of any symbol at point. 
+;When highlight-symbol-on-navigation-p is set, highlighting is triggered regardless of highlight-symbol-idle-delay.
 
 
 ;; Esta es una funcion para poder usar astyle dentro de emacs
 (defun astyle-this-buffer (pmin pmax)
   (interactive "r")
   (shell-command-on-region pmin pmax
-                           "astyle" ;; add options here...
+                           "astyle" ;; add options here...(otherwise it will use the $HOME/.astylerc ones )
                            (current-buffer) t 
                            (get-buffer-create "*Astyle Errors*") t)
   )
@@ -105,3 +105,10 @@
 (global-set-key '[M-down]  'pager-row-down)
 (global-set-key '[M-kp-2]  'pager-row-down)
 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;  Annotations!!!
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Esto sirve para poder tomar notas en los ficheros sin modificarlos.
+(load-library "myannot.el")
