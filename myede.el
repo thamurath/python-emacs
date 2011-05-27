@@ -3,6 +3,6 @@
 ;; EDE customization
 
 (require 'semantic-lex-spp)
-(global-ede-mode 1)
+(global-ede-mode t)
 
 
