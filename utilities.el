@@ -29,7 +29,7 @@
 (require 'autopair)
 (autopair-global-mode) ;; to enable in all buffers
 (setq autopair-autowrap t) ;;Esto es para que ponga el delimitador alrededor de una palabra que tengamos seleccionada.
-(setq autopair-blink t) 
+(setq autopair-blink t)
 
 ;; Para que funcione con el triple quote de python
 (add-hook 'python-mode-hook
@@ -48,9 +48,9 @@
 (global-set-key "\M-_ " 'hippie-expand)
 ;; ido makes competing buffers and finding files easier
 ;; http://www.emacswiki.org/cgi-bin/wiki/InteractivelyDoThings
-(require 'ido) 
+(require 'ido)
 (ido-mode 'both) ;; for buffers and files
-(setq 
+(setq
  ido-save-directory-list-file "~/.emacs.d/ido.last"
 
  ido-ignore-buffers ;; ignore these guys
@@ -78,10 +78,10 @@
 (require 'highlight-symbol)
 ;; TODO: asignarle teclas a las funciones siguientes.
 
-;Use C-f3 to toggle highlighting of the symbol at point throughout the current buffer. 
+;Use C-f3 to toggle highlighting of the symbol at point throughout the current buffer.
 ;Use highlight-symbol-mode to keep the symbol at point always highlighted.
 ;The functions highlight-symbol-next, highlight-symbol-prev, highlight-symbol-next-in-defun and
-; highlight-symbol-prev-in-defun allow for cycling through the locations of any symbol at point. 
+; highlight-symbol-prev-in-defun allow for cycling through the locations of any symbol at point.
 ;When highlight-symbol-on-navigation-p is set, highlighting is triggered regardless of highlight-symbol-idle-delay.
 
 
@@ -90,12 +90,13 @@
   (interactive "r")
   (shell-command-on-region pmin pmax
                            "astyle" ;; add options here...(otherwise it will use the $HOME/.astylerc ones )
-                           (current-buffer) t 
+                           (current-buffer) t
                            (get-buffer-create "*Astyle Errors*") t)
   )
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;Make page up and page down a whole lot nicer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-set-key "\C-v"	   'pager-page-down)
 (global-set-key [next] 	   'pager-page-down)
 (global-set-key "\ev"	   'pager-page-up)
@@ -115,11 +116,6 @@
 
 
 
-;; deleting files goes to OS's trash folder
-(setq delete-by-moving-to-trash t) ; "t" for true, "nil" for false
-;; Make copy and paste to work with other programs
-(setq x-select-enable-clipboard t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
 
 
@@ -141,3 +137,9 @@
   (interactive)
   (if (string= major-mode "jde-mode")
       (ws-trim-tabs)))
+
+
+
+
+;; Cargamos algunas utilidades varias
+(load-library "my-misc-features.el")
