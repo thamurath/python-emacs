@@ -1,4 +1,6 @@
 
+;; Primero nos aseguramos de que tenemos el modo activo.
+(require 'cc-mode)
 
 ;; Cargamos la configuracion del layout del codigo
 (load-library "cc-code-layout.el")
