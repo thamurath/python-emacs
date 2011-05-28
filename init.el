@@ -56,3 +56,8 @@
 
 ;; Cargamos todas las configuraciones necesarias para trabajar con python
 (load-library "python-configuration.el")
+
+
+
+;; Cargamos configuracion de shel
+(load-library "my-shell.el")
