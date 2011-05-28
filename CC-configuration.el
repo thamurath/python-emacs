@@ -13,5 +13,9 @@
 
 ;; Cargamos la configuracion para la integracion de doxygen en emacs
 (load-library "mydoxymacs.el")
+
+;; Cargamos la configuracion para integracion de gdb
+(load-library "gdb-settings.el")
+
 ;; Aqui es donde tenemos los proyectos
 (load-library "myprojects.el")
