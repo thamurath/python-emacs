@@ -61,3 +61,7 @@
 
 ;; Cargamos configuracion de shel
 (load-library "my-shell.el")
+
+
+;; Cargamos la configuracion de autocompletado
+(load-library "my-autocomplete.el")
