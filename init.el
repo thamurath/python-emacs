@@ -53,3 +53,6 @@
 ;; configuracion del modo, cedet , ede , etc ...
 (load-library "CC-configuration.el")
 
+
+;; Cargamos todas las configuraciones necesarias para trabajar con python
+(load-library "python-configuration.el")
