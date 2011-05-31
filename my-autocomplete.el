@@ -2,43 +2,16 @@
 ;; auto-complete mode
 ;;=============================================
 ;; Configuracion que recomienda el proceso de instalacion de la herramienta.
-;; (add-to-list 'load-path "/home/eojojos/.emacs.d/auto-complete/")
 (require 'auto-complete-config)
-;(require 'auto-complete-clang)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
-(ac-config-default) ; la funcion ac-common-setup define las ac-sources, asi que la sobreescrimos.
-;(add-to-list 'ac-sources 'ac-source-semantic)
-
-;; Add ac-source-dictionary to ac-sources of all buffer
-;; TODO: estas son las ac-sources que tengo en el fichero de configuracion de c++,
-;; seguramente tenga que cambiarlas en cada uno de los modos.
-
-(defun ac-common-setup ()
-  (setq ac-sources '(ac-source-filename)) ; Esto es importante para el omni-completado ...
-                                        ; El orden importa
-  (setq ac-sources (append ac-sources '(ac-source-semantic
-                                        ;ac-source-clang-complete
-                                        ;ac-source-rope
-                                        ac-source-yasnippet
-                                        ac-source-functions
-                                        ac-source-variables
-                                        ac-source-symbols
-                                        ac-source-features
-                                        ac-source-abbrev
-                                        ac-source-words-in-same-mode-buffers
-                                        ac-source-dictionary
-                                        ))
-        )
-
-  )
+(add-to-list 'ac-dictionary-directories "./vendor/autocomplete/ac-dicts")
 
 ;; Esto hace que el autocompletado salte solo o no (nil)
 ;; t significa que comience de manera automatica
 ;;Cuando no vale nil es el numero de caracteres que hay que escribir para que salte el autocomplete
-;;(setq ac-auto-start t)
+(setq ac-auto-start t)
 
 ;;Esto hace que con el tabulador salte el autocompletado.
-;(ac-set-trigger-key "TAB")
+(ac-set-trigger-key "TAB")
 
 ;; configuramos Ctrl-n y Ctrl-p para que se comporten para seleccionar los candidatos pero solo cuando este el menu.
 (setq ac-use-menu-map t)
@@ -53,24 +26,21 @@
 
                                         ;Algunas teclas para mostrar la ayuda.
                                         ;(define-key ac-mode-map (kbd "C-c h") 'ac-last-quick-help)
-(define-key ac-mode-map (kbd "C-c H") 'ac-last-help)
+;;(define-key ac-mode-map (kbd "C-c H") 'ac-last-help)
 
 ;; A;adimos semantic para las fuentes en el modo c y c++
-;;(add-hook 'c++-mode (lambda () (add-to-list 'ac-sources 'ac-source-semantic)))
-;;(add-hook 'c-mode (lambda () (add-to-list 'ac-sources 'ac-source-semantic)))
-;;(add-hook 'cc-mode (lambda () (add-to-list 'ac-sources 'ac-source-semantic)))
+(add-hook 'c++-mode (lambda () (add-to-list 'ac-sources 'ac-source-semantic)))
+(add-hook 'c-mode (lambda () (add-to-list 'ac-sources 'ac-source-semantic)))
+(add-hook 'cc-mode (lambda () (add-to-list 'ac-sources 'ac-source-semantic)))
 
 
 
 
 
 ;; Case configuration
-;; ;; Just ignore case
-;; (setq ac-ignore-case t)
 ;; Ignore case if completion target string doesn't include upper characters
 (setq ac-ignore-case 'smart)
-;; ;; Distinguish case
-;; (setq ac-ignore-case nil)
+
 
 (add-hook 'c-mode-common-hook '(lambda ()
                                  ;; ac-omni-completion-sources is made buffer local so
@@ -99,10 +69,48 @@
                                  ;; autocomplete.  In my case, I want AutoComplete to use
                                  ;; semantic and yasnippet (order matters, if reversed snippets
                                  ;; will appear before semantic tag completions).
-                                 (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
+                                 ;; (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
                                  ;;(setq ac-sources '(ac-source-clang-complete))
                                  )
-          )
+         )
 ;;
 ;; Esto es porque tendremos configurado el flymake para no liarla.
-(ac-flyspell-workaround)
+;;(ac-flyspell-workaround)
+
+
+
+;; definicion de las fuentes
+
+;; primero definimos las fuentes por defecto
+;;
+(setq-default ac-sources '(ac-source-filename
+                           ac-source-words-in-buffer
+                           ac-source-words-in-all-buffer
+                           )
+              )
+
+
+(defun my-ac-emacs-lisp-mode ()
+  (setq ac-sources '(
+                     ac-source-symbols
+                     ac-source-variables
+                     ac-source-functions
+                     ac-source-features
+                     ac-source-yasnippet
+                     )
+  )
+)
+(add-hook 'emacs-lisp-mode-hook 'my-ac-emacs-lisp-mode)
+
+(defun my-ac-cc-mode()
+  (auto-complete-mode 1)
+  (setq ac-sources '(
+                     ac-source-filename
+                     ac-source-semantic
+                     ac-source-semantic-raw
+                     ac-source-yasnippet
+                     ac-source-words-in-buffer
+                     ac-source-words-in-same-mode-buffers
+                     ))
+)
+(add-hook 'c-mode-common-hook 'my-ac-cc-mode)
