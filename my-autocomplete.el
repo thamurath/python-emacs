@@ -8,7 +8,7 @@
 ;; Esto hace que el autocompletado salte solo o no (nil)
 ;; t significa que comience de manera automatica
 ;;Cuando no vale nil es el numero de caracteres que hay que escribir para que salte el autocomplete
-(setq ac-auto-start t)
+(setq ac-auto-start 1)
 
 ;;Esto hace que con el tabulador salte el autocompletado.
 (ac-set-trigger-key "TAB")
