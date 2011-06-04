@@ -80,3 +80,7 @@
 ;; Cargamos la config del navegador web en modo texto
 (load-library "my-w3m.el")
 
+
+;; Cargamos la config del modo nXML (un nuevo modo)
+(load-library "my-nxml.el")
+
