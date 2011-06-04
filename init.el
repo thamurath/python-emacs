@@ -46,6 +46,9 @@
 ;; Cargamos los keybingdings
 (load-library "keyboard.el")
 
+;; Cargamos algunas cosillas varias
+(load-library "my-misc-features.el")
+
 ;; Cargamos los keybingdings
 (load-library "myyasnippet.el")
 

@@ -33,8 +33,7 @@
 ;Never put tabs in files, use spaces instead
 ;Note: Use C-q C-i to put a real tab should the need ever arise.
 (setq-default indent-tabs-mode nil)
-;But don't add the newline until we save
-;(setq next-line-add-newlines nil)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Ask before quitting emacs
@@ -70,4 +69,16 @@
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
+;; Que pregunte si queremos añadir una nueva linea al final del fichero
+(setq require-final-newline 'ask)
+;;But don't add the newline until we save
+(setq next-line-add-newlines nil)
 
+
+;; La rueda del ratón es para algo
+(cond (window-system
+       (mwheel-install)
+       ))
+
+;; i want a mouse yank to be inserted where the point is, not where i click
+mouse-yank-at-point t

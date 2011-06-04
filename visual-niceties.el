@@ -15,15 +15,17 @@
 (global-font-lock-mode 1)
 
 
-;; con esto deberia poner los numeros de linea 
-(global-linum-mode 1) 
+;; con esto deberia poner los numeros de linea
+(global-linum-mode 1)
 (setq linum-format "%d ") ; esto deberia poner un espacio detras del numero
+;; con esto deberia mostrar tb la columna.
+(column-number-mode 't)
 
 ;;Ilumina la linea actual
 (global-hl-line-mode 1)
 
 
-;;Para activar el realzado de las coincidencias encontradas hasta el momento en las búsquedas, 
+;;Para activar el realzado de las coincidencias encontradas hasta el momento en las búsquedas,
 ;;debemos poner las siguientes sentencias:
 (setq search-highlight t)
 (setq query-replace-highlight t)
@@ -31,8 +33,6 @@
 ;; para que la "campana" sea visual
 (setq visible-bell 1)
 
-;; no añade lineas vacías al final
-(setq next-line-add-newlines nil)
 
 
 ;; Para que se muestre la hora en la barra de estado en formato 24h
@@ -59,15 +59,16 @@
 (setq inhibit-startup-message t)
 
 ;;Autofill mode
-;;Cuando escribimos un fichero fuente o cuando escribimos un fichero de texto suele ser interesante que el editor decida 
-;;cuando no caben más palabras en en la línea actual y pase a la siguiente. Esta funcionalidad en emacs se conoce como 
-;;"auto-fill". Con la siguiente sentencia indicamos que la columna donde deben terminar las líneas es la 80 y que debe 
+;;Cuando escribimos un fichero fuente o cuando escribimos un fichero de texto suele ser interesante que el editor decida
+;;cuando no caben más palabras en en la línea actual y pase a la siguiente. Esta funcionalidad en emacs se conoce como
+;;"auto-fill". Con la siguiente sentencia indicamos que la columna donde deben terminar las líneas es la 80 y que debe
 ;;activar el modo "auto-fill" para todos los modos derivados del modo de texto y en los modos para C y C++:
-(setq default-fill-column 80)
+(setq default-fill-column 120 )
 (setq auto-fill-mode 1)  ;; con esto pondriamos el modo activo para todos
-;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
-;; (add-hook 'c++-mode-hook 'turn-on-auto-fill)
-;; (add-hook 'c-mode-hook 'turn-on-auto-fill)p
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'c++-mode-hook 'turn-on-auto-fill)
+(add-hook 'c-mode-hook 'turn-on-auto-fill)
+(add-hook 'python-mode-hook 'turn-on-auto-fill)
 
 ;Show newlines at end of file
 (define-fringe-bitmap 'empty-line [0 0 #x3c #x3c #x3c #x3c 0 0])
@@ -93,3 +94,12 @@
                                   (face-attribute 'default :height)))))
 (global-set-key (kbd "C-+") 'increase-font-size)
 (global-set-key (kbd "C--") 'decrease-font-size)
+
+
+;; Muestra la batería del porti
+(display-battery-mode)
+
+
+
+;; La barra del título muestra el nombre del buffer actual
+(setq frame-title-format '("emacs: %*%+ %b"))
