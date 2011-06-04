@@ -84,3 +84,7 @@
 ;; Cargamos la config del modo nXML (un nuevo modo)
 (load-library "my-nxml.el")
 
+
+;; Configuracion del CUA mode por la seleccion rectangular
+(load-library "my-cua-mode.el")
+
