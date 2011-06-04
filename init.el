@@ -73,3 +73,6 @@
 ;; Configuracion para que no abra nuevos buffers cuando utlizamos el dired
 (load-library "my-dired.el")
 
+;; Alguna configuracion para el modo lisp.
+(load-library "my-lisp.el")
+
