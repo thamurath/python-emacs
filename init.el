@@ -68,3 +68,8 @@
 
 ;; Cargamos la configuracion de autocompletado
 (load-library "my-autocomplete.el")
+
+
+;; Configuracion para que no abra nuevos buffers cuando utlizamos el dired
+(load-library "my-dired.el")
+
