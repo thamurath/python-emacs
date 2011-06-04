@@ -76,3 +76,7 @@
 ;; Alguna configuracion para el modo lisp.
 (load-library "my-lisp.el")
 
+
+;; Cargamos la config del navegador web en modo texto
+(load-library "my-w3m.el")
+
