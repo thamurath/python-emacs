@@ -88,3 +88,6 @@
 ;; Configuracion del CUA mode por la seleccion rectangular
 (load-library "my-cua-mode.el")
 
+;; Cargamos la configuracion para django (pony-mode)
+(load-library "my-django-pony-mode.el")
+
