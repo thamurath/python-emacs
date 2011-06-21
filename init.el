@@ -22,7 +22,7 @@
 (require 'pager)
 
 ;; Cargamos la libreria para realizar autocompletado
-(require 'auto-complete)
+;;(require 'auto-complete)
 
 
 ;; Cargamos una libreria que nos permite abrir ficheros como root (ojo keybingins)
@@ -41,7 +41,7 @@
 (load-library "utilities.el")
 
 ;; Cargamos esto sirve para tuner un poco el flyspell
-(load-library "myflyspell.el")
+;;(load-library "myflyspell.el")
 
 ;; Cargamos los keybingdings
 (load-library "keyboard.el")
@@ -57,7 +57,8 @@
 ;; Cargamos todas las configuraciones necesarias para trabajar con python
 (load-library "python-configuration.el")
 
-
+;; Cargamos la configuracion para el Git
+(load-library "my-magit.el")
 
 ;; Cargamos configuracion de shel
 (load-library "my-shell.el")
