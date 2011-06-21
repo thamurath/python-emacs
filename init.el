@@ -22,7 +22,6 @@
 (require 'pager)
 
 ;; Cargamos la libreria para realizar autocompletado
-;;(require 'auto-complete)
 
 
 ;; Cargamos una libreria que nos permite abrir ficheros como root (ojo keybingins)
@@ -46,6 +45,9 @@
 ;; Cargamos los keybingdings
 (load-library "keyboard.el")
 
+;; Cargamos algunas cosillas varias
+(load-library "my-misc-features.el")
+
 ;; Cargamos los keybingdings
 (load-library "myyasnippet.el")
 
@@ -66,3 +68,23 @@
 
 ;; Cargamos la configuracion de autocompletado
 (load-library "my-autocomplete.el")
+
+
+;; Configuracion para que no abra nuevos buffers cuando utlizamos el dired
+(load-library "my-dired.el")
+
+;; Alguna configuracion para el modo lisp.
+(load-library "my-lisp.el")
+
+
+;; Cargamos la config del navegador web en modo texto
+(load-library "my-w3m.el")
+
+
+;; Cargamos la config del modo nXML (un nuevo modo)
+(load-library "my-nxml.el")
+
+
+;; Configuracion del CUA mode por la seleccion rectangular
+(load-library "my-cua-mode.el")
+
