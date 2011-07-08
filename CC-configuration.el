@@ -14,6 +14,9 @@
 ;; Cargamos la configuracion para la integracion de doxygen en emacs
 (load-library "mydoxymacs.el")
 
+;; Cargamos la configuracion para integracion con gccsense
+(load-library "mygccsense.el")
+
 ;; Cargamos la configuracion para integracion de gdb
 (load-library "gdb-settings.el")
 
