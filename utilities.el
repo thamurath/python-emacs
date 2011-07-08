@@ -12,10 +12,10 @@
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; recentf stuff
 ;; Esto es una utilidad que compone una lista de los ficheros abiertos recientemente.
-;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
@@ -141,5 +141,54 @@
 
 
 
+(defun show-file-name ()
+    "Show the full path file name in the minibuffer."
+      (interactive)
+        (message (buffer-file-name))
+          (kill-new (file-truename buffer-file-name))
+          )
+(global-set-key "\C-cz" 'show-file-name)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Con esto conseguimos que la seleccion visual de un
+;; texto se pueda hacer en modo columna
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'rect-mark)
+;; Esto es lo que viene en el paquete para configuracion
+;; pero no funciona correctamente porque me dice que empieza por
+;; una secuencia que no es un prefijo
+
+;; ;; Support for marking a rectangle of text with highlighting.
+;; (define-key ctl-x-map "r\C-@" 'rm-set-mark)
+;; (define-key ctl-x-map [?r ?\C-\ ] 'rm-set-mark)
+;; (define-key ctl-x-map "r\C-x" 'rm-exchange-point-and-mark)
+;; (define-key ctl-x-map "r\C-w" 'rm-kill-region)
+;; (define-key ctl-x-map "r\M-w" 'rm-kill-ring-save)
+;; (define-key global-map [S-down-mouse-1] 'rm-mouse-drag-region)
+;; (autoload 'rm-set-mark "rect-mark"
+;;   "Set mark for rectangle." t)
+;; (autoload 'rm-exchange-point-and-mark "rect-mark"
+;;   "Exchange point and mark for rectangle." t)
+;; (autoload 'rm-kill-region "rect-mark"
+;;   "Kill a rectangular region and save it in the kill ring." t)
+;; (autoload 'rm-kill-ring-save "rect-mark"
+;;   "Copy a rectangular region to the kill ring." t)
+;; (autoload 'rm-mouse-drag-region "rect-mark"
+;;   "Drag out a rectangular region with the mouse." t)
+
+
+;; Esta es la config que recomiendan en emacs-fu y parece interesante
+;; pero de nuevo me da el mismo error de que comienza con algo que no
+;; es un prefijo
+
+(global-set-key (kbd "C-x c C-SPC") 'rm-set-mark)
+(global-set-key (kbd "C-x c C-x")   'rm-exchange-point-and-mark)
+(global-set-key (kbd "C-x c C-w")   'rm-kill-region)
+(global-set-key (kbd "C-x c M-w")   'rm-kill-ring-save)
+
+
 ;; Cargamos algunas utilidades varias
 (load-library "my-misc-features.el")
+
+
