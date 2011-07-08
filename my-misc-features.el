@@ -56,6 +56,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;TRAMP should default to ssh
 ;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'tramp)
 (setq tramp-default-method "ssh")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
