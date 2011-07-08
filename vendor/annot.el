@@ -33,13 +33,13 @@
 ;; store annotations on non-editable files.  Because annot keeps track of md5
 ;; checksums of annotated files, annotations won't disappear even when file
 ;; names are changed.
-;; 
+;;
 ;; Installation:
 ;;
 ;; Insert the following line to your .emacs:
 ;;
 ;;  (require 'annot)
-;; 
+;;
 ;; Keybindings:
 ;;
 ;; * [C-x a]    -  add new annotation or edit existing annotation.
@@ -47,7 +47,7 @@
 ;; * [C-x r]    -  remove annotation at point. (annot-remove)
 ;;
 ;; User Commands:
-;; 
+;;
 ;; * `annot-edit/add' - either edit the annotation at point, if there is,
 ;;                      or else add a new one.
 ;; * `annot-remove'   - remove the annotation at point.
@@ -114,7 +114,7 @@ annotation's position."
   :type 'boolean
   :group 'annot)
 
-(defcustom annot-image-directory "~/" 
+(defcustom annot-image-directory "~/"
   "Default image directory for `annot-add-image'."
   :type 'string
   :group 'annot)
@@ -226,7 +226,7 @@ the file or not."
   (interactive)
   (unless (member major-mode annot-load-disabled-modes)
     (let (filename)
-      (if (or (file-readable-p 
+      (if (or (file-readable-p
                (setq filename (annot-get-annot-filename (annot-md5 (current-buffer)))))
               ;; If md5 fails, try symlink.
               (and (setq filename (annot-get-symlink (buffer-file-name)))
@@ -280,7 +280,7 @@ the file or not."
 ;;; Internal functions.
 
 (defsubst annot-trim (s)
-  "Trim non-graphic chars from both ends of string s." 
+  "Trim non-graphic chars from both ends of string s."
   (replace-regexp-in-string
    "\\`[^[:graph:]]+\\|[^[:graph:]]+\\'"  "" s))
 
@@ -301,7 +301,7 @@ the file or not."
 
 (defsubst annot-md5 (&optional buffer)
   "Get md5 of the buffer content with max chars `annot-md5-max-chars'.
-If `annot-md5-max-chars' is nil, no limit is imposed." 
+If `annot-md5-max-chars' is nil, no limit is imposed."
   (let ((buffer (or buffer (current-buffer))))
     (md5 buffer nil
          (if (null annot-md5-max-chars)
@@ -328,7 +328,7 @@ If `annot-md5-max-chars' is nil, no limit is imposed."
 
 
 (defun annot-get-annotation-at-point ()
-  "Get annotation \(equiv. overlay) at point, or if none found, 1+ point." 
+  "Get annotation \(equiv. overlay) at point, or if none found, 1+ point."
   (let ((p (point)))
     (car (or (overlays-in p p)
              (overlays-in (min (point-max) (1+ p))
@@ -377,7 +377,7 @@ If the new filename \(or equivalently md5) is different from
 previous filename, return delete the previous file."
   (setq annot-buffer-plist
         (plist-put annot-buffer-plist :modtime (float-time)))
-  
+
   (cond
    ;; In case no annotations are left, delete the
    ;; associated annot file.
@@ -393,7 +393,7 @@ previous filename, return delete the previous file."
         (setq symlink (annot-get-symlink filename))
         (if (file-symlink-p symlink)
             (delete-file symlink)))))
-   
+
    (t
     (let* ((buffer (current-buffer))
            (prev-md5 (plist-get annot-buffer-plist :md5))
@@ -413,12 +413,12 @@ previous filename, return delete the previous file."
           (overlay-put ov :next
                        (buffer-substring-no-properties
                         p (min (point-max) (+ p annot-subsequence-length))))))
-      
+
       ;; Delete previous symlink, if any, before creating one.
       (when (and prev-md5 prev-filename (not (string= prev-md5 md5)))
         (if (file-symlink-p (annot-get-symlink prev-filename))
             (delete-file (annot-get-symlink prev-filename))))
-      
+
       ;; Get the S-expression and save the annotations if it is a file-buffer.
       ;; It is possible to load annotations for non-file-buffer, but it is
       ;; not supported yet just to play safe.
@@ -431,13 +431,13 @@ previous filename, return delete the previous file."
                 (annot-save-symlink md5 filename)))
           (error
            (warn "annot-save-annotations: %s" (error-message-string error)))))
-      
+
       ;; Update `annot-buffer-plist'
       (dolist (e '(md5 filename bufname annot-filename modtime))
         (setq annot-buffer-plist
               (plist-put annot-buffer-plist
                          (intern (format ":%S" e)) (symbol-value e))))
-      
+
       ;; If md5 doesn't matche the previous one, delete the old annotation file.
       (when (and prev-md5 (not (string= prev-md5 md5)))
         (let ((old-annot-filename (annot-get-annot-filename prev-md5)))
@@ -536,9 +536,9 @@ Only annotation files use this function internally."
 
 ;;; Keybindings.
 
-(define-key ctl-x-map "a"    'annot-edit/add)
-(define-key ctl-x-map "\C-a" 'annot-edit/add)
-(define-key ctl-x-map "r"    'annot-remove)
+;; (define-key ctl-x-map "a"    'annot-edit/add)
+;; (define-key ctl-x-map "\C-a" 'annot-edit/add)
+;; (define-key ctl-x-map "r"    'annot-remove)
 
 
 ;;; Hooks and Advices.
