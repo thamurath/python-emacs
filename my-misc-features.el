@@ -3,9 +3,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun reload-dot-emacs()
   (interactive)
-  (if(bufferp (get-file-buffer ".emacs"))
-      (save-buffer(get-buffer ".emacs")))
-  (load-file "~/.emacs")
+  (if(bufferp (get-file-buffer "init.el"))
+      (save-buffer(get-buffer "init.el")))
+  (load-file "~/.emacs.d/init.el")
   (message ".emacs reloaded successfully"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
