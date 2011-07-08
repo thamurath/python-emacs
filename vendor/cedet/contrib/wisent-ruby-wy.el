@@ -2,8 +2,8 @@
 
 ;;; Copyright (C) 2007 Daniel Debertin (debertin@gmail.com)
 
-;; Author:  <eojojos@sasn-2010a-test.site>
-;; Created: 2010-07-26 09:36:49+0200
+;; Author:  <eojojos@sasn-2010a-fp01-test>
+;; Created: 2011-06-29 14:22:27+0200
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

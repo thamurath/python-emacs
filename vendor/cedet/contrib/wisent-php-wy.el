@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2008 Free Software Foundation
 
-;; Author:  <eojojos@sasn-2010a-test.site>
-;; Created: 2010-07-26 09:36:52+0200
+;; Author:  <eojojos@sasn-2010a-fp01-test>
+;; Created: 2011-06-29 14:22:28+0200
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

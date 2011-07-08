@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2003, 2004, 2009 Eric M. Ludlam
 
-;; Author:  <eojojos@sasn-2010a-test.site>
-;; Created: 2010-07-26 09:36:41+0200
+;; Author:  <eojojos@sasn-2010a-fp01-test>
+;; Created: 2011-06-29 14:22:20+0200
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Eric M. Ludlam
 
-;; Author:  <eojojos@sasn-2010a-test.site>
-;; Created: 2010-07-26 09:35:20+0200
+;; Author:  <eojojos@sasn-2010a-fp01-test>
+;; Created: 2011-06-29 14:22:05+0200
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
@@ -1244,7 +1244,9 @@
 	 (nth 7 vals))
 	(nth 0 vals)
 	(nth 10 vals)
-	(nth 4 vals))
+	(list
+	 (nth 4 vals))
+	(nth 9 vals))
       )
      (opt-stars
       opt-class
@@ -1266,7 +1268,9 @@
 	 (nth 6 vals))
 	(nth 0 vals)
 	(nth 9 vals)
-	(nth 4 vals))
+	(list
+	 (nth 4 vals))
+	(nth 8 vals))
       )
      ) ;; end func-decl
 
