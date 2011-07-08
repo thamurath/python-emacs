@@ -83,3 +83,23 @@
 
 ;; i want a mouse yank to be inserted where the point is, not where i click
 mouse-yank-at-point t
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Reload all buffers from their files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun revert-all-buffers ()
+  "Refreshes all open buffers from their respective files."
+  (interactive)
+  (dolist (buf (buffer-list))
+    (with-current-buffer buf
+      ;; (when (and (buffer-file-name) (not (buffer-modified-p)))
+      (when (buffer-file-name)
+        (revert-buffer t t t)
+      )
+     )
+  )
+  (message "Refreshed open files.") )
+
+
+
