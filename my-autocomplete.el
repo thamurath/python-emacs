@@ -1,13 +1,19 @@
+;; (require 'auto-complete)
+;; (global-auto-complete-mode t)
+
+
 (add-to-list 'load-path "~/.emacs.d/vendor/autocomplete/")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/autocomplete//ac-dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/autocomplete/ac-dict")
 (ac-config-default)
+
+
 
 
 ;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/autocomplete/dict")
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
-;; 
+;;
 ;; (add-to-list 'ac-dictionary-directories "/home/eojojos/.emacs.d/vendor/autocomplete/ac-dict")
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
