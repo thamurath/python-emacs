@@ -102,4 +102,9 @@ mouse-yank-at-point t
   (message "Refreshed open files.") )
 
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Permite ir a la "ventana" anterior
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun back-window ()
+    (interactive)
+      (other-window -1))
