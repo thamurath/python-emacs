@@ -61,6 +61,8 @@
 
 ;; Cargamos la configuracion para el Git
 (load-library "my-magit.el")
+;; Cargamos tambien la configuracion de este otro modulo que da soporte para annotate en git (magit no tiene)
+(load-library "my-mo-git-blame.el")
 
 ;; Cargamos configuracion de shel
 (load-library "my-shell.el")
