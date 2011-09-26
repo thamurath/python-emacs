@@ -187,6 +187,15 @@
 (global-set-key (kbd "C-x c C-w")   'rm-kill-region)
 (global-set-key (kbd "C-x c M-w")   'rm-kill-ring-save)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Buffer move! 
+;;; Esto sirve para mover los buffers cuando tenemos las ventanas partidas
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'buffer-move)
+(global-set-key (kbd "<C-S-up>")     'buf-move-up)
+(global-set-key (kbd "<C-S-down>")   'buf-move-down)
+(global-set-key (kbd "<C-S-left>")   'buf-move-left)
+(global-set-key (kbd "<C-S-right>")  'buf-move-right)
 
 ;; Cargamos algunas utilidades varias
 (load-library "my-misc-features.el")
