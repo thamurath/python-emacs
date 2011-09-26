@@ -126,11 +126,11 @@
 ;;;; ------------------------------------------------------------------------
 ;;;; --- ws-trim.el - [1.3] ftp://ftp.lysator.liu.se/pub/emacs/ws-trim.el
 ;;;; ------------------------------------------------------------------------
-(require 'ws-trim)
-(global-ws-trim-mode t)
-(set-default 'ws-trim-level 2)
-(setq ws-trim-global-modes '(guess (not message-mode eshell-mode)))
-(add-hook 'ws-trim-method-hook 'joc-no-tabs-in-java-hook)
+;; (require 'ws-trim)
+;; (global-ws-trim-mode t)
+;; (set-default 'ws-trim-level 2)
+;; (setq ws-trim-global-modes '(guess (not message-mode eshell-mode)))
+;; (add-hook 'ws-trim-method-hook 'joc-no-tabs-in-java-hook)
 
 (defun joc-no-tabs-in-java-hook ()
   "WS-TRIM Hook to strip all tabs in Java mode only"
