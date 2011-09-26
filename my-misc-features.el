@@ -108,3 +108,26 @@ mouse-yank-at-point t
 (defun back-window ()
     (interactive)
       (other-window -1))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Permite moverse libremente entre los buffers
+;;; en lugar de tener que usar el C-x o
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Windmove is a library built into GnuEmacs starting with version 21. 
+;;It lets you move point from window to window using Shift and the arrow keys. 
+;;This is easier to type than ‘C-x o’ and, for some users, may be more intuitive. 
+;;To activate all these keybindings, add the following to your init file:
+
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
+;;The ‘fbound’ test is for those XEmacs installations that don’t have the windmove package available.
+;;If you are a PcSelectionMode or CuaMode user, however, you will need to use your own keybindings, since shift plus arrow keys are used to extend the selection. For CuaMode it may be natural to use
+;;(windmove-default-keybindings 'meta)
+;;This will override ‘M-left’ and ‘M-right’ but these are duplicated by ‘C-left’ and ‘C-right’ which are probably more natural for a CuaMode user.
+;;Some terminals do not support modified arrow keys. To use a prefix instead of a modifier, add something like the following to your init file.
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
