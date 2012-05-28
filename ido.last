@@ -1,0 +1,44 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/eojojos/HugeDataStore/Source/" . "SASN/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/eojojos/HugeDataStore/Source/SASN/NSdiametercom/module/diametercom/"
+ "~/"
+ "~/Desktop"
+ "~/Documents"
+ "~src"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "RatingGroupConfiguration.cc"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/eojojos/HugeDataStore/Source/SASN/NSdiametercom/module/diametercom/" (20367 61591) "StatisticsCounters.cc" "CTRLdata.h" "CTRLdata.o" "diametercom_query.o" "IntegerList.h" "RatingGroupConfiguration.cc" "ReconciliationInfoNode.h" "DefaultControlClass.cc" "GxApplication.o" "DCCASimApplication.cc" "SRAPApplication.cc" "diametercom.h" "SRAPSimApplication.o" "SimApplication.h" "ResultCode.cc" "ThrottledTransaction.cc" "ThrottlingManager.h" "DiameterPeer.h" "String.h" "SCAPSimApplication.h" "DiameterWatchdog.h" "diametercom_ncap.cc" "Imakefile" "CTRLsession.cc" "DiameterPeer.o" "ThrottlingManager.cc" "ThrottlingData.h" "ThrottlingTree.cc" "DCCASimApplication.o" "IntegerList.cc" "DiameterApplication.cc" "Formater.o" "Swap.h" "CLCISimApplication.o" "Currency.o" "ThrottledTransaction.h" "CLCIApplication.cc" "libdiametercom.a" "ServiceBasedConfiguration.cc" "GarbageCollectorDiameter.cc" "NCAPdata.cc" "BearerSession.o" "IntegerList.o" "ServiceBasedConfiguration.o" "DiameterWatchdog.o" "ReconciliationInfoData.h" "diametercom.mod" "diametercom_config.o" "CTRLsession.h" "Makefile" "ReconciliationInfoNode.cc" "SCAPApplication.cc" "StatisticsCounters.o" "diametercom_ncap.o" "RatingTypeConfiguration.h" "diametercom.o" "SCAPApplication.o" "StringSplitter.o" "DebugTracer.h" "ThrottlingRateCalculator.h" "StringToIntegerFunctionGeneratorMacros.h" "ReconciliationInfoData.cc" "SRAPSimApplication.cc" "SRAPApplication.o" "RatingTypeConfiguration.cc" "RxR7Application.o" "ReconciliationInfoHandler.h" "SCAPSimApplication.o" "DefaultControlClass.o" "ThrottlingTree.o" "Currency.cc" "CLCIApplication.o" "StringSplitter.h" "ResultCode.h" "ThrottlingRateCalculator.cc" "SCAPApplication.h" "CLCIApplication.h" "DiameterPeer.cc" "StringSplitter.cc" "DebugTracer.o" "StatisticsCounters.h" "ReconciliationInfoHandler.o" "NullControlSession.h" "diametercom_config.cc" "ReconciliationInfoRecord.h" "Makefile.bak" "NCAPdata.o" "RxR7Application.cc" "SRAPApplication.h" "GarbageCollectorDiameter.o" "SCAPSimApplication.cc" "DCCApplication.o" "BearerSession.cc" "GxApplication.cc" "DiameterBuffer.o" "ReconciliationInfoRecord.o" "Statistics.cc" "ReconciliationInfoRecord.cc" "ThrottlingRateCalculator.o" "RatingGroupConfiguration.o" "DiameterWatchdog.cc" "diametercom_query.cc" "Statistics.h" "Formater.cc" "DiameterApplication.o" "DebugTracer.cc" "CLCISimApplication.cc" "StringUtilities.h" "DCCApplication.cc" "BearerSession.h" "Formater.h" "NCAPdata.h" "SimApplication.cc" "String.o" "GarbageCollectorDiameter.h" "cscope.out" "CTRLsession.o" "ReconciliationInfoNode.o" "CLCISimApplication.h" "diametercom.cc" "DefaultControlClass.h" "CTRLdata.cc" "RxR7Application.h" "utilities.h" "RatingTypeConfiguration.o" "DiameterBuffer.h" "ReconciliationInfoHandler.cc" "DCCApplication.h" "RatingGroupConfiguration.h" "ThrottledTransaction.o" "DCCASimApplication.h" "ServiceBasedConfiguration.h" "SimApplication.o" ".shared-info" "GxApplication.h" "DiameterApplication.h" "Currency.h" "String.cc" "ResultCode.o" "DiameterBuffer.cc" "SRAPSimApplication.h" ".shared-info.bak" "ThrottlingTree.h" "Statistics.o" "ReconciliationInfoData.o" "ThrottlingManager.o" "../" "./")
+
+ ("/home/eojojos/HugeDataStore/Source/SASN/NSdiametercom/module/" (20366 48646) "Imakefile" "../" "diametercom/" "Makefile" "Makefile.bak" "./")
+
+ ("/home/eojojos/HugeDataStore/Source/SASN/NSdiametercom/" (20366 48655) "Imakefile" "lib/" "../" "bin/" "Makefile" "doc/" "pkg/" "module/" "./" ".git/" "test/")
+
+ ("/home/eojojos/HugeDataStore/Source/SASN/" (20367 59203) "NSsnmpmpt/" "NScharging/" "NSworkflow/" ".gitmodules" "NSdiametercom/" "NSlm/" "NStacom/" "NShws/" "NStrafrawio/" "Imakefile" "NSvmhandler/" ".ropeproject/" "../" "NSDquery/" "NSprobe/" "NSpacket/" "Makefile" "NSio/" "NStcp/" "NSPgcdr/" "NSInjector/" "NSreplicator/" "NSfw/" "NSheuristics/" "NSudr/" "NSsm/" "NSncap/" "NSbroker/" "NSPedr/" "NSicapcom/" "NSnetinit/" "NScpur/" "NSNunit/" "Makefile.bak" "NSldapcom/" "NSDcanalyzer/" "NSDefw/" "NScfe/" "NSPcdr/" "NSportalcom/" "NSdataprobe/" "NSncapparams/" "NSsimpleconf/" "NSradiussig/" "cscope.out" "NSossstats/" "NSradiusproxy/" "NSpmd/" "NSsara/" "NSDgtp/" "NShttp/" "./" "NScanalyzer/" "NSaocmgr/" "NSaclparams/" "NSvr/" "NSdnscom/" "NSTmodule/" "NSrecon/" "NSscm/" "NSsnmpagn/" "NSipv4/" "cscope.files" "NSPrelay/" ".git/" "NSDdatasource/")
+
+ ("/home/eojojos/HugeDataStore/Source/" (20345 44479) "cvsSASNS/" "anotherSASN/" "../" "gdbpython/" "SASN/" "Pyro/" "x4170-35-necs.wzd" "otherSASN/" "bitbucket/" "tools/" "./" "Projects/" "variant-git/" "pSASN/")
+
+ ("/home/eojojos/HugeDataStore/Source/otherSASN/" (20367 58561) "NSsnmpmpt/" "NScharging/" "NSworkflow/" ".gitmodules" "NSdiametercom/" "NSlm/" "NStacom/" "NShws/" "NStrafrawio/" "Imakefile" "NSvmhandler/" "../" "NSDquery/" "NSprobe/" "NSpacket/" "Makefile" "NSio/" "NStcp/" "NSPgcdr/" "NSInjector/" "NSreplicator/" "NSPrelay.patch" "NSfw/" "NSheuristics/" "NSudr/" "NSsm/" "NSncap/" "NSbroker/" "NSPedr/" "NSicapcom/" "NSnetinit/" "NScpur/" "NSNunit/" "Makefile.bak" "NSldapcom/" "NSDcanalyzer/" "NSDefw/" "NScfe/" "NSPcdr/" "NSportalcom/" "NSdataprobe/" "NSncapparams/" "NSsimpleconf/" "NSradiussig/" "cscope.out" "NSossstats/" "NSradiusproxy/" "NSpmd/" "NSsara/" "NSDgtp/" "NShttp/" "./" "NScanalyzer/" "NSaocmgr/" "NSaclparams/" "NSvr/" "NSdnscom/" "NSTmodule/" "NSrecon/" "NSscm/" "NSsnmpagn/" "NSipv4/" "cscope.files" "NSPrelay/" ".git/" "NSDdatasource/")
+
+ ("/home/eojojos/HugeDataStore/Source/otherSASN/NSdiametercom/" (20277 13315) "Imakefile" "lib/" "../" "bin/" "doc/" "pkg/" "module/" "./" ".git/" "test/")
+
+ ("/home/eojojos/HugeDataStore/Source/otherSASN/NSdiametercom/module/" (20277 13315) "Imakefile" "../" "diametercom/" "./")
+
+ ("/home/eojojos/HugeDataStore/Source/otherSASN/NSdiametercom/module/diametercom/" (20369 6970) "StatisticsCounters.cc" "CTRLdata.h" "CTRLdata.o" "diametercom_query.o" "ReconciliationInfoNode.h" "GxApplication.o" "DCCASimApplication.cc" "SRAPApplication.cc" "diametercom.h" "SRAPSimApplication.o" "SimApplication.h" "ResultCode.cc" "DiameterPeer.h" "SCAPSimApplication.h" "DiameterWatchdog.h" "diametercom_ncap.cc" "Imakefile" "CTRLsession.cc" "DiameterPeer.o" "DCCASimApplication.o" "../" "DiameterApplication.cc" "Formater.o" "CLCISimApplication.o" "Currency.o" "CLCIApplication.cc" "libdiametercom.a" "NCAPdata.cc" "BearerSession.o" "IntegerList.o" "ServiceBasedConfiguration.o" "DiameterWatchdog.o" "ReconciliationInfoData.h" "diametercom.mod" "diametercom_config.o" "CTRLsession.h" "ReconciliationInfoNode.cc" "SCAPApplication.cc" "StatisticsCounters.o" "diametercom_ncap.o" "SCAPApplication.o" "StringSplitter.o" "DebugTracer.h" "ReconciliationInfoData.cc" "SRAPSimApplication.cc" "SRAPApplication.o" "RxR7Application.o" "ReconciliationInfoHandler.h" "SCAPSimApplication.o" "DefaultControlClass.o" "Currency.cc" "CLCIApplication.o" "ResultCode.h" "SCAPApplication.h" "CLCIApplication.h" "DiameterPeer.cc" "DebugTracer.o" "StatisticsCounters.h" "ReconciliationInfoHandler.o" "diametercom_config.cc" "ReconciliationInfoRecord.h" "NCAPdata.o" "RxR7Application.cc" "SRAPApplication.h" "SCAPSimApplication.cc" "DCCApplication.o" "BearerSession.cc" "GxApplication.cc" "DiameterBuffer.o" "ReconciliationInfoRecord.o" "Statistics.cc" "ReconciliationInfoRecord.cc" "RatingGroupConfiguration.o" "DiameterWatchdog.cc" "diametercom_query.cc" "Statistics.h" "Formater.cc" "DiameterApplication.o" "DebugTracer.cc" "CLCISimApplication.cc" "DCCApplication.cc" "BearerSession.h" "Formater.h" "NCAPdata.h" "SimApplication.cc" "String.o" "CTRLsession.o" "ReconciliationInfoNode.o" "CLCISimApplication.h" "diametercom.cc" "./" "CTRLdata.cc" "RxR7Application.h" "RatingTypeConfiguration.o" "DiameterBuffer.h" "ReconciliationInfoHandler.cc" "DCCApplication.h" "DCCASimApplication.h" "SimApplication.o" "GxApplication.h" "DiameterApplication.h" "Currency.h" "ResultCode.o" "DiameterBuffer.cc" "SRAPSimApplication.h" "Statistics.o" "ReconciliationInfoData.o")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
